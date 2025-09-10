@@ -2,36 +2,21 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Manajemen Data Diri</title>
+  <title>Loading...</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-  <!-- Overlay Blur -->
-  <div id="blur-overlay"></div>
-
-  <!-- Loading Screen -->
-  <div id="loading-screen" style="display:none;">
+<body class="splash-body">
+  <div class="splash-screen">
+    <h1 class="splash-title">Sabar dulu :)</h1>
     <div class="loader"></div>
+    <p class="splash-text">Sedang memuat aplikasi...</p>
   </div>
 
-  <!-- Kontainer utama -->
-  <h1>📋 Manajemen Data Diri</h1>
-  <div class="card-index">
-    <button onclick="window.location.href='tambah.html'" class="btn-primary">Tambah Data</button>
-    <table>
-      <thead>
-        <tr>
-          <th>Nama</th>
-          <th>Umur</th>
-          <th>Alamat</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="data-list"></tbody>
-    </table>
-  </div>
-
-  <script src="script.js"></script>
+  <script>
+    // Redirect otomatis ke index setelah 3 detik
+    setTimeout(() => {
+      window.location.href = "index2.html";
+    }, 3000);
+  </script>
 </body>
 </html>
