@@ -4,7 +4,7 @@
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1a1a2e, #2a1f3d, #3d1f5c);
+  background: linear-gradient(145deg, #1a1a2e, #2a1f3d, #3d1f5c);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -18,35 +18,33 @@ body {
 h1 {
   text-align: center;
   margin: 30px 0;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 800;
   background: linear-gradient(90deg, #e0aaff, #c77dff, #9333ea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: slideDown 1s ease;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  animation: slideDown 1s ease;
 }
 
-/* ==== CARD ==== */
 .card {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
   width: 90%;
-  max-width: 900px;
+  max-width: 850px;
   animation: fadeUp 0.8s ease;
 }
 
-/* ==== BUTTON GLOBAL ==== */
+/* ==== BUTTON ==== */
 button, .btn-primary, .btn-edit, .btn-delete {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
 }
-
 .btn-primary {
   padding: 12px 25px;
   background: linear-gradient(135deg, #9333ea, #6b21a8);
@@ -57,7 +55,7 @@ button, .btn-primary, .btn-edit, .btn-delete {
 .btn-primary:hover {
   background: linear-gradient(135deg, #6b21a8, #9333ea);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(147,51,234,0.5);
+  box-shadow: 0 6px 15px rgba(147,51,234,0.5);
 }
 
 /* ==== TABLE ==== */
@@ -66,16 +64,15 @@ table {
   border-collapse: collapse;
   margin-top: 15px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 thead {
   background: rgba(147,51,234,0.9);
 }
 thead th {
-  padding: 15px;
+  padding: 14px;
   text-align: left;
   font-size: 1rem;
-  color: #fff;
 }
 tbody tr {
   background: rgba(255,255,255,0.05);
@@ -91,13 +88,12 @@ tbody tr:hover {
 td {
   padding: 12px 15px;
   font-size: 0.95rem;
-  color: #f0f0f0;
 }
 .btn-delete {
   padding: 6px 12px;
   background: #dc3545;
   color: #fff;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 .btn-delete:hover {
   background: #a71d2a;
@@ -121,18 +117,16 @@ form {
 }
 label {
   font-weight: 600;
-  margin-bottom: 5px;
-  color: #fff;
+  color: #e0d7ff;
   font-size: 1rem;
 }
 input {
   padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #2c2f36;
   color: #f0f0f0;
   font-size: 1rem;
-  width: 100%;
   transition: all 0.3s ease;
 }
 input:focus {
@@ -142,11 +136,10 @@ input:focus {
   transform: scale(1.02);
 }
 
-/* ==== TOMBOL SIMPAN ==== */
+/* Tombol simpan */
 .form-buttons {
   display: flex;
-  justify-content: flex-end; /* posisi kanan */
-  margin-top: 20px;
+  justify-content: flex-end;
 }
 button[type="submit"] {
   padding: 12px 25px;
@@ -157,30 +150,32 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: linear-gradient(135deg, #6b21a8, #9333ea);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(147,51,234,0.4);
+  box-shadow: 0 5px 18px rgba(147,51,234,0.5);
 }
 
 /* ==== ANIMASI ==== */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {opacity:0;}
+  to {opacity:1;}
 }
 @keyframes slideDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {transform: translateY(-20px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
 }
 @keyframes fadeUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {transform: translateY(20px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
 }
 
-/* ==== RESPONSIVE ==== */
+/* ==== RESPONSIVE MOBILE ==== */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
+    margin: 20px 0;
   }
   .card {
     padding: 20px;
+    width: 95%;
   }
   table, thead, tbody, th, td, tr {
     display: block;
@@ -191,15 +186,25 @@ button[type="submit"]:hover {
   }
   tbody tr {
     margin-bottom: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
   }
   tbody td {
-    padding: 10px;
-    text-align: left;
     display: flex;
     justify-content: space-between;
+    padding: 8px 5px;
+    font-size: 0.9rem;
   }
   .form-buttons {
-    justify-content:
+    justify-content: center; /* tombol simpan center di mobile */
+  }
+  button, input {
+    font-size: 1rem;
+  }
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
