@@ -124,7 +124,7 @@ if (form) {
         background: "#1e1e2f",
         color: "#fff",
       });
-      setTimeout(() => (window.location.href = "index.html"), 2200);
+      setTimeout(() => (window.location.href = "index2.html"), 2200);
     }, 1200);
   });
 }
